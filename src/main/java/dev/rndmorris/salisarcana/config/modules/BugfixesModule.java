@@ -21,6 +21,8 @@ public class BugfixesModule extends BaseConfigModule {
     public final ToggleSetting strictInfusionMatrixInputChecks;
     public final ToggleSetting unOredictGoldCoin;
     public final ToggleSetting staffFocusEffectFix;
+    public final ToggleSetting runicShieldRegenUseWorldTime;
+    public final ToggleSetting runicShieldIndividualHitRechargePrevention;
 
     public BugfixesModule() {
         addSettings(
@@ -84,7 +86,17 @@ public class BugfixesModule extends BaseConfigModule {
                 this,
                 ConfigPhase.LATE,
                 "staffFocusEffectFix",
-                "Fixes a graphical error where focus effects would appear below the tip of a staff."));
+                "Fixes a graphical error where focus effects would appear below the tip of a staff."),
+            runicShieldRegenUseWorldTime = new ToggleSetting(
+                this,
+                ConfigPhase.LATE,
+                "runicShieldRegenUseWorldTime",
+                "Change the runic shielding regeneration and special ability timers from a \"system time\" delay to a \"number of ticks\" delay."),
+            runicShieldIndividualHitRechargePrevention = new ToggleSetting(
+                this,
+                ConfigPhase.LATE,
+                "runicShieldIndividualHitRechargePrevention",
+                "Change the timer which prevents runic shields from recharging after a player is damaged from a global timer to individual timers per player."));
     }
 
     @Nonnull

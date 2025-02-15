@@ -73,3 +73,15 @@ Reduce the burn time of Thaumcraft's greatwood and silverwood slabs to match tha
 **Config option:** `staffFocusEffectFix`
 
 Fixes a graphical error where focus effects would appear below the tip of a staff.
+
+## Runic Shield World Time Recharge
+
+**Config option:** `runicShieldRegenUseWorldTime`
+
+Change the runic shielding regeneration and special ability timers from a "system time" delay to a "number of ticks" delay.
+
+## Runic Shield Individual Hit Recharge Prevention
+
+**Config option:** `runicShieldIndividualHitRechargePrevention`
+
+Change the timer which prevents runic shields from recharging after a player is damaged from a global timer to individual timers per player.
